@@ -602,7 +602,7 @@ section.top-cover .logo-wrap .logo-1 {
 section.top-cover .logo-wrap .logo-2 {
   position: absolute;
   bottom: 0;
-  right: 10%;
+  right: -25px;
   width: 80.5%;
   transform: translate(-1%, -11%);
 }

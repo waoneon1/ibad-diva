@@ -1603,7 +1603,11 @@
                     
                     <div class="couple-picture-wrap">
                       
-                      <div class="couple-picture lightgallery aos-init" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="false" lg-uid="lg0"><a class="img-wrap" href="./index_files/thumb-lg-342407-1200-1200-1721356560-74dde6235bec22ccb219c444.png" target="_blank"><img class="img" src="./index_files/thumb-lg-342407-1200-1200-1721356560-74dde6235bec22ccb219c444.png" alt=""></a></div>
+                      <div class="couple-picture lightgallery aos-init">
+                        <a class="img-wrap" >
+                        <img class="img" src="./index_files/photo2.jpg" alt="">
+                        </a>
+                      </div>
                       
                     </div>
                     
@@ -1704,9 +1708,9 @@
                     
                     <div class="couple-picture-wrap">
                       
-                      <div class="couple-picture lightgallery aos-init" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="false" lg-uid="lg1">
-                      	<a class="img-wrap" href="./index_files/thumb-lg-342408-1200-1200-1721356603-d9a7ce0cbece7373a8271a0c.png" target="_blank">
-                      		<img class="img" src="./index_files/thumb-lg-342408-1200-1200-1721356603-d9a7ce0cbece7373a8271a0c.png" alt="">
+                      <div class="couple-picture lightgallery aos-init">
+                      	<a class="img-wrap" href="./index_files/photo1.jpg" target="_blank">
+                      		<img class="img" src="./index_files/photo1.jpg" alt="">
                       	</a>
                       </div>
                       
@@ -1799,6 +1803,7 @@
           
         </section>
         
+
         <section class="agenda-wrap">
           
           <div class="agenda-inner">
@@ -1950,7 +1955,7 @@
                         
                         <p class="activity-city aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="450" data-aos-anchor-placement="top-bottom">Madura</p>
                         
-                        <div class="activity-link-wrap aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="450" data-aos-anchor-placement="top-bottom"><a href="https://maps.google.com/?cid=8287387651898214747" class="activity-link" target="_blank">View Maps</a></div>
+                        <div class="activity-link-wrap aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="450" data-aos-anchor-placement="top-bottom"><a href="https://maps.app.goo.gl/NztNNXmtvsyzzjxV6" class="activity-link" target="_blank">View Maps</a></div>
                         
                       </div>
                       
@@ -1978,29 +1983,62 @@
               
               <div class="save-date-box aos-init aos-animate" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="200">
                 
+                 <script>
+                   // Set the date we're counting down to
+                   var countDownDate = new Date("Novemver 10, 2024 08:00:00").getTime();
+                   
+                   // Update the count down every 1 second
+                   var x = setInterval(function() {
+                   
+                     // Get today's date and time
+                     var now = new Date().getTime();
+                   
+                     // Find the distance between now and the count down date
+                     var distance = countDownDate - now;
+                   
+                     // Time calculations for days, hours, minutes and seconds
+                     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                   
+                     // Display the result in the element with id="demo"
+                     document.getElementById("wpkoi-hari").innerHTML = days;
+                     document.getElementById("wpkoi-jam").innerHTML = hours;
+                     document.getElementById("wpkoi-menit").innerHTML = minutes;
+                     document.getElementById("wpkoi-detik").innerHTML = seconds;
+                   
+                     // If the count down is finished, write some text
+                     if (distance < 0) {
+                       clearInterval(x);
+                       document.getElementById("demo").innerHTML = "EXPIRED";
+                     }
+                   }, 1000);
+                </script>
+
                 <div class="countdown">
                   
                   <div class="count-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
                     
-                    <h2 class="count-num count-day">4</h2>
+                    <h2 class="count-num count-day" id="wpkoi-hari">00</h2>
                     <small class="count-text">Days</small>
                   </div>
                   
                   <div class="count-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
                     
-                    <h2 class="count-num count-hour">0</h2>
+                    <h2 class="count-num count-hour" id="wpkoi-jam">0</h2>
                     <small class="count-text">Hours</small>
                   </div>
                   
                   <div class="count-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
                     
-                    <h2 class="count-num count-minute">0</h2>
+                    <h2 class="count-num count-minute" id="wpkoi-menit">0</h2>
                     <small class="count-text">Minutes</small>
                   </div>
                   
                   <div class="count-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
                     
-                    <h2 class="count-num count-second">4</h2>
+                    <h2 class="count-num count-second" id="wpkoi-detik">4</h2>
                     <small class="count-text">Seconds</small>
                   </div>
                   
@@ -2168,25 +2206,25 @@
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
                               
-                              <h4 class="bank-name">BANK BCA</h4>
+                              <h4 class="bank-name">BANK BNI</h4>
                               
                             </div>
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
                               
-                              <h4 class="bank-account-number" data-copy="6870819771">Acc. number: 6870819771</h4>
+                              <h4 class="bank-account-number" data-copy="0979055559">Acc. number: 0979055559</h4>
                               
                             </div>
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
-                              
-                              <h4 class="bank-account-name">Acc. name: Laura Rahardini</h4>
+
+                              <h4 class="bank-account-name">Acc. name: Sadiyah</h4>
                               
                             </div>
                             
                             <div class="copy-btn-wrap">
                               
-                              <div class="copy-btn" data-copy="6870819771">Salin</div>
+                              <div class="copy-btn" data-copy="0979055559">Salin</div>
                               
                             </div>
                             
@@ -2204,25 +2242,25 @@
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
                               
-                              <h4 class="bank-name">BANK MANDIRI</h4>
+                              <h4 class="bank-name">BANK JATIM</h4>
                               
                             </div>
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
                               
-                              <h4 class="bank-account-number" data-copy="0060007912268">Acc. number: 0060007912268</h4>
+                              <h4 class="bank-account-number" data-copy="0257969100">Acc. number: 0257969100</h4>
                               
                             </div>
                             
                             <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
                               
-                              <h4 class="bank-account-name">Acc. name: Awal Ramadhan</h4>
+                              <h4 class="bank-account-name">Acc. name: Sa'diyah</h4>
                               
                             </div>
                             
                             <div class="copy-btn-wrap">
                               
-                              <div class="copy-btn" data-copy="0060007912268">Salin</div>
+                              <div class="copy-btn" data-copy="0257969100">Salin</div>
                               
                             </div>
                             
@@ -2566,12 +2604,12 @@
       // Banks
       var BANK_OPTIONS = [{
         "id": 11522,
-        "title": "BANK BCA",
-        "credential": "6870819771"
+        "title": "BANK BNI",
+        "credential": "0979055559"
       }, {
         "id": 11523,
-        "title": "BANK MANDIRI",
-        "credential": "0060007912268"
+        "title": "BANK JATIM",
+        "credential": "0257969100"
       }];
       // RSVP
       var RSVP = {

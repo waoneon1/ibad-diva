@@ -1414,18 +1414,24 @@
                 </div>
               </div>
             </div>
+            <div class="body-wrap" id="wdp-name-wrapper" style="margin-bottom: 16px;display: none;">
+              <div class="foot" style="padding-top: 0;">
+                <p>
+                   Kepada Yth. 
+                </p>
+                <p id="wdp-name" style="text-transform: capitalize;font-weight: bold"></p>
+              </div>
+            </div>
             <div class="body-wrap">
+
+           
               <div class="body highlight aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="500">
                 <div class="orn-cover-frame">
                   <div class="cover-frame" id="coverFrame">
-                    <div class="cover-picture cover-show slick-initialized slick-slider" id="cover-main">
-                      <div class="slick-list">
-                        <div class="slick-track" style="opacity: 1; width: 5000px;">
-                          <div class="picture desktop slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+                    <div class="cover-picture cover-show slick-initialized slick-slider" >
+                       <div class="picture desktop" data-slick-index="0" aria-hidden="false" tabindex="0" style="position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
                             <img src="./assets/diahsahri-cover.jpg" alt="">
                           </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -2269,6 +2275,42 @@
                         </div>
                         
                       </div>
+
+                      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450" class="aos-init aos-animate">
+                        
+                        <div class="bank-item" id="savingBook11525">
+                          
+                          <div class="bank-detail">
+                            
+                            <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+                              
+                              <h4 class="bank-name">BANK BCA</h4>
+                              
+                            </div>
+                            
+                            <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+                              
+                              <h4 class="bank-account-number" data-copy="6710225361">Acc. number: 6710225361</h4>
+                              
+                            </div>
+                            
+                            <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+                              
+                              <h4 class="bank-account-name">Acc. name: Sahri</h4>
+                              
+                            </div>
+                            
+                            <div class="copy-btn-wrap">
+                              
+                              <div class="copy-btn" data-copy="6710225361">Salin</div>
+                              
+                            </div>
+                            
+                          </div>
+                          
+                        </div>
+                        
+                      </div>
                       
                     </div>
                     
@@ -2590,13 +2632,39 @@
     
     <section class="music-outer aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
       
-      <div class="music-box auto playing" id="music-box" style="animation-play-state: paused;"></div>
+      <div class="music-box auto playing" id="music-box"></div>
       
     </section>
     <script>
+
+      function getParameterByName(name, url = window.location.href) {
+       name = name.replace(/[\[\]]/g, '\\$&');
+       var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+         results = regex.exec(url);
+       if (!results) return null;
+       if (!results[2]) return '';
+       return decodeURIComponent(results[2].replace(/\+/g, ' '));
+       }
+       var to = getParameterByName('to');
+       console.log(to, 'sss');
+
+       if (to) {
+          document.getElementById("wdp-name-wrapper").style.display = "block";
+          to = to.replace(/-/g, " ");
+          document.getElementById("wdp-name").innerHTML = to;
+       }
+       
+
+
+     document.addEventListener('click', function() {
+        var audio = document.getElementById('music-box');
+        if (audio.paused) {
+          audio.play();
+        }
+      });
       // Music
       var MUSIC = {
-        'url': "https:\/\/katsudoto-storage.sgp1.vultrobjects.com\/media\/public\/37501\/31197\/assets\/cant-help-falling-in-love-cello-piano-cover-brooklyn-duo-1723141537-0c1f87d6b830aa47b0c03cab.mp3",
+        'url': "./assets/bermuara.mp3",
         'box': '#music-box'
       };
       // Event

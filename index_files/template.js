@@ -265,6 +265,7 @@ var isCoverPlayed = false;
                 }
 
                 // if cover has been slicked
+                console.log(element, 'xx');
                 if ($(element).hasClass('slick-initialized')) {
                     $(element).slick('unslick');      // stop the slider
                 }                
@@ -939,88 +940,6 @@ var post_comment = function(e) {
 $(document).on('submit', 'form#weddingWishForm', post_comment);
 
 
-// Load Comment
-var load_comment = function() {
-    var data = new FormData();
-    data.append('post', 'loadComment');
-
-    var template = $('.wedding-wish-wrap').attr('data-template');
-    if (template != '') data.append('template', template);
-
-    var onSuccess = function(res) {
-        if (res.commentItems) $('.comment-wrap').addClass('show').html(res.commentItems);
-
-        if (!res.commentItems) $('.comment-wrap').removeClass('show');
-
-        if (res.nextComment && res.nextComment != 0) {
-            $('.more-comment-wrap').addClass('show');
-            $('#moreComment').attr('data-start', res.nextComment);
-        }
-
-        if (!res.nextComment) {
-            $('.more-comment-wrap').removeClass('show');
-            $('#moreComment').attr('data-start', 0);
-        }
-    }
-
-    postData(data, onSuccess);
-}
-
-setTimeout(() => { load_comment(); }, 500);
-
-
-// More Comment
-var more_comment = function(e) {
-    e.preventDefault();
-    var me = this;
-    var meText = $(me).html();
-    var start = $(this).attr('data-start');
-    var loadText = $(this).attr('data-load-text');
-    var template = $(this).attr('data-template');
-
-    if (loadText == '') loadText = "Loading";
-
-    if (start != '') {
-
-        var data = new FormData();
-        data.append('post', 'moreComment');
-        data.append('start', start);
-        data.append('template', template);
-
-        var onSuccess = function(res) {
-            if (res.commentItems) $('.comment-wrap').addClass('show').append(res.commentItems);
-
-            if (res.nextComment && res.nextComment != 0) {
-                $('.more-comment-wrap').addClass('show');
-                $(me).attr('data-start', res.nextComment);
-            }
-
-            if (!res.nextComment) {
-                $('.more-comment-wrap').removeClass('show');
-                $(me).attr('data-start', 0);
-            }
-
-            afterSend();
-        }
-
-        var onError = function(res=null) { afterSend(); }
-
-        var afterSend = function() {
-            $(me).prop('disabled', false).html(meText);
-        }
-
-        var beforeSend = function() {
-            $(me).prop('disabled', true).html(loadText + " <i class='fas fa-spinner fa-spin'></i>");
-        }
-
-        postData(data, onSuccess, onError, beforeSend);
-    }
-}
-
-$(document).on('click', '#moreComment', more_comment);
-
-
-
 /*  ==============================
         MUSIC
 ============================== */
@@ -1030,9 +949,10 @@ var isMusicAttemptingToPlay = false,
     pauseBoxAnimation,
     pauseMusic,
     playMusic;
-
+console.log('musicxx');
 // Background Music
 (function backgroundMusic() {
+    console.log('music', window.MUSIC )
     if (typeof window.MUSIC != 'undefined') {        
         var url = window.MUSIC.url,
             box = window.MUSIC.box;

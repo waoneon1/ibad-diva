@@ -393,7 +393,7 @@ section.primary-pane .logo-wrap .logo-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%;
+  width: 100%;
   transform: translate(0%, 0%);
 }
 section.primary-pane .logo-wrap .logo-2 {
@@ -596,7 +596,7 @@ section.top-cover .logo-wrap .logo-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%;
+  width: 100%;
   transform: translate(0%, 0%);
 }
 section.top-cover .logo-wrap .logo-2 {
@@ -771,7 +771,7 @@ section.cover .inner .head .logo-wrap .logo-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%;
+  width: 100%;
   transform: translate(0%, 0%);
 }
 section.cover .inner .head .logo-wrap .logo-2 {
@@ -2889,7 +2889,7 @@ section.footnote-wrap .footnote .logo-wrap .logo-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%;
+  width: 100%;
   transform: translate(0%, 0%);
 }
 section.footnote-wrap .footnote .logo-wrap .logo-2 {
